@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">Pocket Manager</string>
+
+    <string-array name="spinner_test">
+        <item>Item-1</item>
+        <item>Item-2</item>
+        <item>Item-3</item>
+    </string-array>
+
+    <string name="launch_login_button">Login</string>
+    <string name="launch_signUp_button">Sign Up</string>
+    <string name="launch_message">Manage Your Pocket with US</string>
+    <string name="signup_hint_name">Enter Username</string>
+    <string name="signup_button">Create Account</string>
+    <string name="signup_message">Enter details to create Account</string>
+    <string name="signup_already">Already have Account?</string>
+    <string name="signup_login"><font color='#3CAE5C'>Login</font></string>
+    <string name="signup_hint_password">Enter Password</string>
+    <string name="signup_hint_confirm_password">Confirm Password</string>
+    <string name="login_message">Please Login to continue</string>
+    <string name="login_button">Login</string>
+    <string name="login_no_account">Do not have Account?</string>
+    <string name="login_no_account_click">Create Account</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Expense Manager</string>
+    <string name="nav_header_subtitle">Easy with us</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+    <string name="my_menu_analysis">Analysis</string>
+    <string name="my_menu_add_expenses">Add Expense</string>
+    <string name="my_menu_transactions">Transactions</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="add">Add</string>
+    <string name="logout">Logout</string>
+    <string name="header_title">Title 1</string>
+    <string name="header_text">header description</string>
+
+    <string name="tab_transactions">Transactions</string>
+    <string name="tab_detailed_analysis">Detailed Analysis</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cd_add">Add</string>
+    <string name="placeholder_8535">₹ 8535</string>
+    <string name="placeholder_total_expense">Your Total Expense</string>
+    <string name="dialog_add_transaction">Add Transaction</string>
+    <string name="dialog_edit_transaction">Edit Transaction</string>
+    <string name="dialog_save">Save</string>
+    <string name="dialog_enter_note_for_transaction">Enter Note for transaction</string>
+    <string name="dialog_enter_amount_for_transaction">Enter Amount for transaction</string>
+    <string name="dialog_select_type">Select Expense Type</string>
+    <string name="dialog_cash">Cash</string>
+    <string name="dialog_upi_net_banking">UPI/Net-Banking</string>
+    <string name="dialog_select_date">Date</string>
+    <string name="dialog_exp_select_type">Select Type</string>
+    <string name="dialog_select_month">Month</string>
+    <string name="dialog_select_edit_date">Select Date</string>
+    <string name="analysis_fragment_expense_type">Expense Type</string>
+    <string name="fragment_last_5_transactions">Recent Transactions</string>
+    <string name="frag_show_all">SHOW ALL</string>
+
+    <string-array name="spinner_values">
+        <item>Food or Drinks</item>
+        <item>Rent</item>
+        <item>Water</item>
+        <item>Electricity</item>
+        <item>Internet</item>
+        <item>Grocery</item>
+        <item>Travel</item>
+        <item>Entertainment</item>
+        <item>Medical</item>
+        <item>Clothing</item>
+        <item>Gift</item>
+        <item>Books</item>
+        <item>Credit</item>
+        <item>Insurance</item>
+        <item>Others</item>
+    </string-array>
+
+</resources>

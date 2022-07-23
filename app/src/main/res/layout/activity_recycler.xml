@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    android:clipToPadding="false"
+    tools:context=".RecyclerActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="5dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/recycler_item_view"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

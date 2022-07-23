@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context=".AnalysisFragment">
+
+    <RelativeLayout
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/pie_card_view"
+        app:cardElevation="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:id="@+id/fragment_pie_chart"
+            android:layout_width="match_parent"
+            android:layout_height="350dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:visibility="invisible"
+        android:layout_below="@id/pie_card_view"
+        android:id="@+id/analysis_type_card_view"
+        app:cardCornerRadius="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@drawable/card_gradient"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ibm_plex_sans_medium"
+                android:textStyle="bold"
+                android:textSize="21sp"
+                android:text="@string/analysis_fragment_expense_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/myRed"
+                android:id="@+id/expense_analysis_text"
+                android:gravity="center"
+                android:fontFamily="@font/ibm_plex_sans_medium"
+                android:textSize="21sp"
+                android:text="Internet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="25dp"
+        android:visibility="invisible"
+        android:layout_below="@id/analysis_type_card_view"
+        android:id="@+id/analysis_recyclerview"
+        tools:listitem="@layout/recycler_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</ScrollView>

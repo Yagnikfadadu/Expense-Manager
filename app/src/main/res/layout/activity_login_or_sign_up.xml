@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".LoginOrSignUp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_marginTop="-15dp"
+        style="@style/CardView.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="@string/launch_message"
+        android:textColor="@color/myGreen"
+        android:textSize="21sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@raw/launchimage"
+        android:src="@raw/launchimage"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        app:cornerRadius="5dp"
+        android:elevation="10dp"
+        style="@style/CardView.Light"
+        android:backgroundTint="@color/myGreen"
+        app:rippleColor="@color/white"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/launch_login_button" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signup_button"
+        app:cornerRadius="5dp"
+        android:elevation="5dp"
+        android:backgroundTint="@color/white"
+        app:strokeColor="@color/myGreen"
+        android:textColor="@color/myGreen"
+        app:rippleColor="@color/myGreen"
+        android:textSize="18sp"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/launch_signUp_button" />
+
+
+</LinearLayout>

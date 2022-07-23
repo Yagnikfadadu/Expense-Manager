@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ExpenseManager" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/myGreen</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/myGreen</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="actionBarStyle">@style/green_action_bar</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/myGreen</item>
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialog</item>
+        <item name="android:dropDownListViewStyle">@style/MyListViewStyle</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyListViewStyle" parent="@android:style/Widget.ListView">
+        <item name="android:divider">#acc7af</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/scale_up</item>
+        <item name="android:windowExitAnimation">@anim/scale_down</item>
+    </style>
+
+
+    <style name="BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:colorBackground">@color/white</item>
+    </style>
+    <style name="BottomSheet" parent="Widget.MaterialComponents.BottomSheet.Modal">
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.ExpenseManager.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="green_action_bar">
+        <item name="background">@color/myGreen</item>
+    </style>
+
+    <style name="menu_text">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="poppins_text">
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+    <style name="poppins_text_bold">
+        <item name="android:textColor">@color/myGreen</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
+
+    <style name="Theme.ExpenseManager.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ExpenseManager.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

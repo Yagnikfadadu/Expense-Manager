@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.196" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/bottom_sheet_rounded_corner.xml" value="0.1885" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/card_gradient.xml" value="0.1885" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/circular_image.xml" value="0.2275" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/gradient.xml" value="0.2265" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.1725" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.196" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_analytics_24.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_currency_rupee_24.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.2275" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_history_24.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.1885" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2275" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2185" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2185" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/scale_down.xml" value="0.1725" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/scale_up.xml" value="0.1725" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/side_nav_bar.xml" value="0.2185" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/spinner_drawable.xml" value="0.2265" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_hamburger.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_home.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_login.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_login_or_sign_up.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_main.xml" value="0.1984375" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_main_home.xml" value="0.264" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_recycler.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_sign_up.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_tab.xml" value="0.264" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/app_bar_home.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/content_home.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/custom_bottom_sheet_dialog.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/custom_bottom_sheet_edit.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/custom_list_item.xml" value="0.536" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_analysis.xml" value="0.3418241577649959" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_gallery.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_home.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_slideshow.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_transactions.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/list_item.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/list_item_edit.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/my_home_navigation_drawer.xml" value="0.536" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/nav_header_home.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/recycler_item_view.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/menu/activity_main_drawer.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/menu/home.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/menu/my_home_menu.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/menu/my_menu.xml" value="0.6" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1725" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
