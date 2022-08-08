@@ -13,11 +13,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:id="@+id/chip_layout"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group"
+            android:layout_marginHorizontal="10dp"
+            app:singleSelection="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.google.android.material.chip.Chip
+                style="@style/My_Widget.MaterialComponents.Chip.Choice"
+                android:textSize="16sp"
+                android:layout_marginStart="25dp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/chip_weekly"
+                android:text="@string/chip_weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                style="@style/My_Widget.MaterialComponents.Chip.Choice"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/chip_monthly"
+                android:text="@string/chip_monthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.Chip
+                style="@style/My_Widget.MaterialComponents.Chip.Choice"
+                android:textSize="16sp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/chip_custom"
+                android:text="@string/chip_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
 
     <com.google.android.material.card.MaterialCardView
+        android:layout_below="@id/chip_layout"
         android:id="@+id/pie_card_view"
         app:cardElevation="10dp"
         android:layout_marginTop="5dp"
@@ -26,12 +67,12 @@
         android:layout_height="wrap_content">
 
         <com.github.mikephil.charting.charts.PieChart
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="15dp"
             android:id="@+id/fragment_pie_chart"
             android:layout_width="match_parent"
-            android:layout_height="350dp" />
+            android:layout_height="350dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp" />
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView

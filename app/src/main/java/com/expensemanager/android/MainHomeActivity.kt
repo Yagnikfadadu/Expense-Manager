@@ -47,7 +47,6 @@ class MainHomeActivity : AppCompatActivity()
 
     fun pushTransaction(amount:String, note:String, type:String, mode:String, date:String)
     {
-        var id = (System.currentTimeMillis())
         val expenseTransactionModal = ExpenseTransactionModal(amount,note,type,mode,date)
         val current = LocalDateTime.now()
         val formatter = DateTimeFormatter.ofPattern("HH:mm:ss")

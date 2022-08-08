@@ -27,6 +27,11 @@
         <item name="android:windowExitAnimation">@anim/scale_down</item>
     </style>
 
+    <style name="My_Widget.MaterialComponents.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+        <!-- Chip background color selector -->
+        <item name="backgroundColor">@color/myGreenLight</item>
+        <item name="chipBackgroundColor">@color/my_choice_chip_background_color</item>
+    </style>
 
     <style name="BottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/BottomSheet</item>

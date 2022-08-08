@@ -20,6 +20,7 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2275" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2185" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.2185" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/my_chip.xml" value="0.1725" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/scale_down.xml" value="0.1725" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/scale_up.xml" value="0.1725" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/side_nav_bar.xml" value="0.2185" />
@@ -38,7 +39,7 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/custom_bottom_sheet_dialog.xml" value="0.4" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/custom_bottom_sheet_edit.xml" value="0.4" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/custom_list_item.xml" value="0.536" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_analysis.xml" value="0.3418241577649959" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_analysis.xml" value="0.32098765432098764" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_gallery.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_home.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/fragment_slideshow.xml" value="0.21666666666666667" />

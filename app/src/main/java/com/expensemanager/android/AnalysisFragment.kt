@@ -1,14 +1,13 @@
 package com.expensemanager.android
 
 import android.graphics.Color
-import android.graphics.Typeface
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.util.Pair
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -16,7 +15,6 @@ import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Description
 import com.github.mikephil.charting.components.Legend
-import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
@@ -24,15 +22,27 @@ import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.highlight.Highlight
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
+import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.firebase.database.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 
-class AnalysisFragment : Fragment(), OnChartValueSelectedListener 
+class AnalysisFragment : Fragment(), OnChartValueSelectedListener
 {
+    private var headTextString:String = "Select Date Range"
+    lateinit var weeklyChip:Chip
+    lateinit var monthlyChip: Chip
+    lateinit var customChip: Chip
     lateinit var cardView:MaterialCardView
     lateinit var recyclerView: RecyclerView
     lateinit var selectedType:String
+    lateinit var chipGroup: ChipGroup
     lateinit var pieChart: PieChart
+    private var beginMillis:Long = 0
+    private var endMillis:Long = 0
     lateinit var firebaseReference: DatabaseReference
     lateinit var transactionsAdapterRecyclerAnalysis:TransactionAdapterClick
     lateinit var firebaseReferenceRecycler: DatabaseReference
@@ -55,9 +65,89 @@ class AnalysisFragment : Fragment(), OnChartValueSelectedListener
         recyclerView = view.findViewById(R.id.analysis_recyclerview)
         cardView = view.findViewById(R.id.analysis_type_card_view)
         expenseAnalysisText = view.findViewById(R.id.expense_analysis_text)
+        chipGroup = view.findViewById(R.id.chip_group)
+        weeklyChip = view.findViewById(R.id.chip_weekly)
+        monthlyChip = view.findViewById(R.id.chip_monthly)
+        customChip = view.findViewById(R.id.chip_custom)
+
+        weeklyChip.setOnClickListener {
+           if (weeklyChip.isChecked){
+               val c1 = Calendar.getInstance()
+               c1[Calendar.DAY_OF_WEEK] = 1
+
+               val year1 = c1[Calendar.YEAR]
+               val month1 = c1[Calendar.MONTH] + 1
+               val day1 = c1[Calendar.DAY_OF_MONTH]
+
+               c1[Calendar.DAY_OF_WEEK] = 7
+
+               val year7 = c1[Calendar.YEAR]
+               val month7 = c1[Calendar.MONTH] + 1
+               val day7 = c1[Calendar.DAY_OF_MONTH]
+
+               val sdf = SimpleDateFormat("yyyy/MM/dd")
+
+               val begin = "$year1/$month1/$day1"
+               val beginDate = sdf.parse(begin)
+
+               val end = "$year7/$month7/$day7"
+               val endDate = sdf.parse(end)
+
+               beginMillis = beginDate?.time!!
+               endMillis = endDate?.time!!
+               fetchTransactions(beginMillis,endMillis)
+           }
+           else{
+               loadDataToArrayList()
+           }
+        }
+
+        monthlyChip.setOnClickListener {
+            if (monthlyChip.isChecked){
+                val cal = Calendar.getInstance()
+                val beginDate = 1
+                val endDate = cal.getMaximum(Calendar.DATE)
+                val month = cal.get(Calendar.MONTH)+1
+                val year = cal.get(Calendar.YEAR)
+
+                val sdf = SimpleDateFormat("yyyy/MM/dd")
+
+                val begin = "$year/$month/$beginDate"
+                val end = "$year/$month/$endDate"
+
+                val monthStartDate = sdf.parse(begin)
+                val monthEndDate = sdf.parse(end)
+
+                beginMillis = monthStartDate?.time!!
+                endMillis = monthEndDate?.time!!
+                fetchTransactions(beginMillis,endMillis)
+
+            }
+            else{
+                loadDataToArrayList()
+            }
+        }
+
+        customChip.setOnClickListener {
+            if (customChip.isChecked){
+                val dateRangePicker = MaterialDatePicker.Builder.dateRangePicker().build()
+                dateRangePicker.addOnPositiveButtonClickListener {selection->
+                    if (selection.first!=null && selection.second!=null){
+                        beginMillis = selection.first
+                        endMillis = selection.second
+                        headTextString = dateRangePicker.headerText
+                        fetchTransactions(beginMillis,endMillis)
+                    }
+                }
+                dateRangePicker.show(childFragmentManager,"rang_picker")
+            }
+            else{
+                loadDataToArrayList()
+            }
+        }
 
 
-        val layoutManager: LinearLayoutManager = LinearLayoutManager(requireContext())
+        val layoutManager = LinearLayoutManager(requireContext())
         layoutManager.reverseLayout = true
         layoutManager.stackFromEnd = true
         recyclerView.layoutManager = layoutManager
@@ -71,6 +161,34 @@ class AnalysisFragment : Fragment(), OnChartValueSelectedListener
         pieChart.setOnChartValueSelectedListener(this)
 
         return view
+    }
+
+    private fun fetchTransactions(begin:Long, end:Long) {
+        firebaseReference.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    transactionArrayList.clear()
+                    for (transactionSnapshot in snapshot.children) {
+                        val key = transactionSnapshot.key
+                        val transactionClass = TransactionDataClass(_amount = "-"+transactionSnapshot.child("amount").value.toString(),
+                            _note = transactionSnapshot.child("note").value.toString(),
+                            _date = transactionSnapshot.child("date").value.toString(),
+                            _mode = transactionSnapshot.child("mode").value.toString(),
+                            _type = transactionSnapshot.child("type").value.toString())
+                        val exp:String = transactionSnapshot.child("amount").value.toString()
+                        if (key?.toLong()!! in begin..end){
+                            transactionArrayList.add(transactionClass)
+                        }
+                    }
+                }
+                populatePieChart()
+                transactionsAdapterRecyclerAnalysis.notifyDataSetChanged()
+            }
+            override fun onCancelled(error: DatabaseError) {
+                val i:Int = 0
+            }
+
+        })
     }
 
     private fun loadDataToArrayList() {
@@ -95,6 +213,42 @@ class AnalysisFragment : Fragment(), OnChartValueSelectedListener
             }
 
         })
+    }
+
+    private fun loadDataToArrayListRangeAndType(begin: Long, end: Long, transactionType:String) {
+        firebaseReferenceRecycler.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                if (snapshot.exists()) {
+                    transactionArrayListRecycler.clear()
+                    for (transactionSnapshot in snapshot.children) {
+                        val key = transactionSnapshot.key
+                        val transactionClass = TransactionDataClass(_amount = "-"+transactionSnapshot.child("amount").value.toString(),
+                            _note = transactionSnapshot.child("note").value.toString(),
+                            _date = transactionSnapshot.child("date").value.toString(),
+                            _mode = transactionSnapshot.child("mode").value.toString(),
+                            _type = transactionSnapshot.child("type").value.toString())
+                        if (transactionClass._type==transactionType) {
+                            if (key?.toLong()!! in begin..end){
+                                transactionArrayListRecycler.add(transactionClass)
+                            }
+                        }
+                    }
+                    transactionsAdapterRecyclerAnalysis.notifyDataSetChanged()
+                }
+                else
+                {
+                    transactionArrayListRecycler.clear()
+                    pieChart.clear()
+                    cardView.visibility = View.INVISIBLE
+                    transactionsAdapterRecyclerAnalysis.notifyDataSetChanged()
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
+        selectedType = transactionType
     }
 
     private fun loadDataToArrayList(transactionType:String) {
@@ -212,6 +366,13 @@ class AnalysisFragment : Fragment(), OnChartValueSelectedListener
         pieChart.description = description
         pieChart.data = pieData
         pieChart.centerText = "Expenses"
+        if (customChip.isChecked && transactionArrayList.isNotEmpty()){
+            pieChart.centerText = "Expenses\n$headTextString"
+            pieChart.setCenterTextSize(12f)
+        }
+        if (transactionArrayList.isEmpty()){
+            pieChart.centerText = "No Data found"
+        }
         pieChart.setCenterTextSize(18f)
         pieChart.setEntryLabelTextSize(16f)
         pieChart.extraLeftOffset = 15f
@@ -233,13 +394,20 @@ class AnalysisFragment : Fragment(), OnChartValueSelectedListener
         expenseAnalysisText.text = (p0 as PieEntry).label
         cardView.visibility = View.VISIBLE
         pieChart.centerText = (p0 as PieEntry).label +"\n"+(p0 as PieEntry).value
-        loadDataToArrayList((p0 as PieEntry).label)
+        if (weeklyChip.isChecked or monthlyChip.isChecked or customChip.isChecked){
+            loadDataToArrayListRangeAndType(beginMillis,endMillis,(p0 as PieEntry).label)
+        }else{
+            loadDataToArrayList((p0 as PieEntry).label)
+        }
     }
 
     override fun onNothingSelected() {
         var int:Int = 0
-        pieChart.centerText = ""
+        pieChart.centerText = "Expense"
         recyclerView.visibility = View.INVISIBLE
         cardView.visibility = View.INVISIBLE
+        if (customChip.isChecked){
+            pieChart.centerText = headTextString
+        }
     }
 }

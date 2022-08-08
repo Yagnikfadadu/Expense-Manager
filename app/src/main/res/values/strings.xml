@@ -67,6 +67,9 @@
     <string name="analysis_fragment_expense_type">Expense Type</string>
     <string name="fragment_last_5_transactions">Recent Transactions</string>
     <string name="frag_show_all">SHOW ALL</string>
+    <string name="chip_weekly">Weekly</string>
+    <string name="chip_monthly">Monthly</string>
+    <string name="chip_custom">Custom</string>
 
     <string-array name="spinner_values">
         <item>Food or Drinks</item>
