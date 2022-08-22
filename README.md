@@ -1,4 +1,4 @@
-# Pocket Manager ( Expense Manager )
+# Pocket Manager ( Expense Manager ) ![Total Visits](https://pv-badge.herokuapp.com/total.svg?repo_id=Yagnikfadadu/Expense-Manager)
 ![Banner](https://user-images.githubusercontent.com/100338428/180600763-7bbeddfd-bc0d-4d3c-9535-c465ca387eda.jpg)
 # How to use ?
 * Download and install Application from <a href="https://drive.google.com/file/d/1fERi3876mALNsvIcZp8AmDcaU8oOuFYz/view?usp=sharing">here</a> (6.7MB).
