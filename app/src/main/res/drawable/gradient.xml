@@ -4,6 +4,6 @@
     <stroke android:color="@color/myGreen"/>
     <gradient
         android:angle="305"
-        android:startColor="#93F9B9"
-        android:endColor="@color/myGreen"/>
+        android:startColor="@color/myGreen"
+        android:endColor="@color/myGreen1"/>
 </shape>

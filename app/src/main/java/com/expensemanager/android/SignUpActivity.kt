@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.util.Base64
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.TextView
@@ -42,22 +43,21 @@ class SignUpActivity : AppCompatActivity()
 
             if (name.isNotBlank() && name.isNotEmpty())
             {
-                if (pass == cPass)
-                {
-                    userNameAvailable(name,pass)
-                }
-                else if (pass.isEmpty())
-                {
-                    userPass.error = "Password cannot be Empty"
-                }
-                else
-                {
-                    userPass.error = "Password Missmatch!"
+                if(isEmailValid(name)) {
+                    if (pass == cPass) {
+                        userNameAvailable(name, pass)
+                    } else if (pass.isEmpty()) {
+                        userPass.error = "Password cannot be Empty"
+                    } else {
+                        userPass.error = "Password Mismatch!"
+                    }
+                }else{
+                    userName.error = "Invalid Email"
                 }
             }
             else
             {
-                userName.error = "Username cannot be Empty!"
+                userName.error = "Email cannot be Empty!"
             }
         }
 
@@ -70,7 +70,9 @@ class SignUpActivity : AppCompatActivity()
 
     fun pushData(uName:String,uPass:String)
     {
-        val userModal = UserModal(uName,uPass)
+        val realName:String = uName
+        val uName = encodeEmail(uName)
+        val userModal = UserModal(uName,uPass,realName)
         databaseReference.child(uName).setValue(userModal).addOnSuccessListener {
             closeKeyBoard()
             Snackbar.make(findViewById(R.id.create_account),"Account Created Successfully",Snackbar.LENGTH_SHORT).show()
@@ -87,8 +89,8 @@ class SignUpActivity : AppCompatActivity()
 
     private fun userNameAvailable(uName: String, uPass: String)
     {
-        val data:DatabaseReference = FirebaseDatabase.getInstance().getReference()
-        val userNameReference:DatabaseReference = data.child("Users").child(uName)
+        val data:DatabaseReference = FirebaseDatabase.getInstance().reference
+        val userNameReference:DatabaseReference = data.child("Users").child(encodeEmail(uName))
         val valueEventListener = object :ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (!snapshot.exists())
@@ -98,7 +100,7 @@ class SignUpActivity : AppCompatActivity()
                 }
                 else
                 {
-                    userName.error = "Username already taken"
+                    userName.error = "Email already taken"
                 }
             }
 
@@ -116,5 +118,12 @@ class SignUpActivity : AppCompatActivity()
         }
     }
 
+    private fun isEmailValid(email: String): Boolean {
+        val emailPattern = Regex("^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$")
+        return email.matches(emailPattern)
+    }
 
+    private fun encodeEmail(email: String): String {
+        return Base64.encodeToString(email.toByteArray(), Base64.URL_SAFE or Base64.NO_WRAP)
+    }
 }

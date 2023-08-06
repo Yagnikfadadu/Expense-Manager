@@ -25,14 +25,16 @@
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/scale_up.xml" value="0.1725" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/side_nav_bar.xml" value="0.2185" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/drawable/spinner_drawable.xml" value="0.2265" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_forget_pass.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_forget_password.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_hamburger.xml" value="0.2" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_home.xml" value="0.21666666666666667" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_login.xml" value="0.4" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_login_or_sign_up.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_login_or_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_main.xml" value="0.1984375" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_main_home.xml" value="0.264" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_recycler.xml" value="0.4" />
-        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_sign_up.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/activity_tab.xml" value="0.264" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/app_bar_home.xml" value="0.21666666666666667" />
         <entry key="..\:/Users/ADMIN/AndroidStudioProjects/ExpenseManager/app/src/main/res/layout/content_home.xml" value="0.21666666666666667" />

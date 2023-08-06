@@ -10,7 +10,7 @@
     <string name="launch_login_button">Login</string>
     <string name="launch_signUp_button">Sign Up</string>
     <string name="launch_message">Manage Your Pocket with US</string>
-    <string name="signup_hint_name">Enter Username</string>
+    <string name="signup_hint_name">Enter Email</string>
     <string name="signup_button">Create Account</string>
     <string name="signup_message">Enter details to create Account</string>
     <string name="signup_already">Already have Account?</string>

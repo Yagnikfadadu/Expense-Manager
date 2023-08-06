@@ -8,7 +8,8 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_gravity="center"
-    tools:context=".LoginActivity">
+    tools:context=".ForgetPassActivity"
+    >
 
     <androidx.cardview.widget.CardView
         app:cardBackgroundColor="@color/white"
@@ -37,7 +38,7 @@
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/poppins_bold"
                 android:gravity="center"
-                android:text="@string/login_message"
+                android:text="Forget Password"
                 android:textColor="@color/myGreen"
                 android:textSize="21sp" />
 
@@ -53,69 +54,86 @@
                 android:layout_height="wrap_content">
                 <com.google.android.material.textfield.TextInputEditText
                     android:textColor="@color/black"
-                    android:id="@+id/login_text_name"
+                    android:id="@+id/fp_email"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginBottom="10dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:boxStrokeColor="@color/black"
-                android:layout_marginHorizontal="30dp"
-                android:hint="@string/signup_hint_password"
-                android:textColorHint="@color/myGreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:textColor="@color/black"
-                    android:id="@+id/login_text_password"
-                    android:inputType="textPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/forget_password"
-                android:fontFamily="@font/poppins"
-                android:textSize="14sp"
-                android:layout_gravity="right"
-                android:layout_marginEnd="30dp"
-                android:textColor="@color/myGreen"
-                android:text="Forget Password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/login_proceed"
+                android:id="@+id/fp_button_get_OTP"
                 android:layout_marginBottom="15dp"
                 android:layout_marginTop="5dp"
-                android:text="@string/login_button"
+                android:text="Get OTP"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppins_bold"
                 style="@style/CardView.Light"
                 android:layout_marginHorizontal="45dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
-            <TextView
-                android:fontFamily="@font/poppins"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/black"
+                app:boxBackgroundColor="@color/white"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Enter OTP"
+                android:textColorHint="@color/myGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fp_OTP"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:visibility="gone"
+                android:id="@+id/fp_button_validate_OTP"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Validate OTP"
                 android:textSize="18sp"
-                android:textColor="@color/black"
-                android:gravity="center"
-                android:text="@string/login_no_account"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-            <TextView
-                android:id="@+id/create_new_account"
-                style="@style/CardView.Light"
                 android:fontFamily="@font/poppins_bold"
+                style="@style/CardView.Light"
+                android:layout_marginHorizontal="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginBottom="10dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:boxStrokeColor="@color/black"
+                android:layout_marginHorizontal="30dp"
+                android:hint="Enter New Password"
+                android:textColorHint="@color/myGreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fp_text_password"
+                    android:textColor="@color/black"
+                    android:inputType="textPassword"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fp_button_reset_password"
+                android:visibility="gone"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:text="Reset Password"
                 android:textSize="18sp"
-                android:textColor="@color/myGreen"
-                android:gravity="center"
-                android:text="@string/login_no_account_click"
-                android:layout_width="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                style="@style/CardView.Light"
+                android:layout_marginHorizontal="45dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 </LinearLayout>
