@@ -1,4 +1,4 @@
-# Pocket Manager ( Expense Manager )
+# Pocket Manager ( Expense Manager ) [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FYagnikfadadu%2FExpense-Manager&count_bg=%2379C83D&title_bg=%23555555&icon=kotlin.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 ![Banner](https://user-images.githubusercontent.com/100338428/180600763-7bbeddfd-bc0d-4d3c-9535-c465ca387eda.jpg)
 # How to use ?
 * Download and install Application from <a href="https://drive.google.com/file/d/1fERi3876mALNsvIcZp8AmDcaU8oOuFYz/view?usp=sharing">here</a> (6.7MB).
